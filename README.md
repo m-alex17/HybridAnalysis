@@ -1,4 +1,10 @@
 # hybrid
+This is an automated test oracle to find energy defects of android applications implemented on top of the soot framework.
+This tool combines static and dynamic analysis in order to find energy defects related to CPU, GPS, Sensors, Screen, WiFiLock and WakeLock.
+There is Three main patterns: 
+Resource Leak
+Screen defects
+Update rate of Sensors
 
 ## Prerequisites
 - Python 3
@@ -11,4 +17,6 @@
 - An Android device or emulator
 
 ## How to use?
-To download the Sentinel tool:
+Clone the project, Run it.
+
+
