@@ -1,4 +1,5 @@
 import os
+import sys
 
 # **************************************************************************
 root_dir = "F:\\javaP\\displayBrightnessResult"
@@ -140,6 +141,7 @@ for f in lines:
             # time.sleep(1)
             # time.sleep(.5)
             d.press("back")
+            d.press("back")
             after_run = runCommand(adbCommand)
             diff = int(after_run) - int(beforeTest_displayTime)
             if (diff > 0):
@@ -167,6 +169,7 @@ for f in lines:
         # if ("Confirmed" in t()):
         #     list_activiyNames_has_LeaK.append(activityName)
     else:
+        d.press("back")
         d.press("back")
         # time.sleep(.4)
         after_run = runCommand(adbCommand)

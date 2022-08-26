@@ -19,7 +19,7 @@ def runCommand(adbCommand):
 # **********************************************************************************
 apkName = sys.argv[1]
 # apkName = "sensorLeak.apk"
-print(apkName)
+print("apk name is ",apkName)
 
 runEmulator()
 

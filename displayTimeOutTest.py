@@ -1,5 +1,5 @@
 import os
-
+import sys
 # **************************************************************************
 root_dir = "F:\\javaP\\displayTimeOutResult"
 
@@ -129,12 +129,12 @@ for f in lines:
             d.press("back")
             # time.sleep(1)
             diff = int(after_run) - int(beforeTest_displayTime)
-                    print(diff, after_run)
-                    if (diff > 0):
-                        print("Confirmed Leak")
-                        list_activiyNames_has_LeaK.append(activityName)
-                    else:
-                        print("No Leak")
+            print(diff, after_run)
+            if (diff > 0):
+                  print("Confirmed Leak")
+                  list_activiyNames_has_LeaK.append(activityName)
+            else:
+                print("No Leak")
 
     elif testType in "home":
         d.press("home")
@@ -154,13 +154,13 @@ for f in lines:
         d.press("back")
         d.press("back")
         # time.sleep(.4)
-       after_run = runCommand(adbCommand)
-       diff = int(after_run) - int(beforeTest_displayTime)
+        after_run = runCommand(adbCommand)
+        diff = int(after_run) - int(beforeTest_displayTime)
         print(diff, after_run)
-                if (diff > 0):
-                    print("Confirmed Leak")
-                    list_activiyNames_has_LeaK.append(activityName)
-                else:
-                    print("No Leak")
+        if (diff > 0):
+              print("Confirmed Leak")
+              list_activiyNames_has_LeaK.append(activityName)
+        else:
+           print("No Leak")
 
     d.app_stop_all()

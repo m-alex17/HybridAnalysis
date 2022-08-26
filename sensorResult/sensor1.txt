@@ -1,4 +1,4 @@
-org.thecongers.mtpms
-org.thecongers.mtpms.MainActivity
+com.asus.gallery
+com.asus.gallery.app.SimpleVrVideoActivity
 -1
 both

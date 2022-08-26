@@ -390,9 +390,10 @@ public class Util {
 
                     if (checkStaticinvoke(stmt, packageName)) {
                         System.out.println("in static");
-                        SootClass circleClass = stmt.getInvokeExpr().getMethod().getDeclaringClass();
-                        SootMethod metod = circleClass.getMethodByName(stmt.getInvokeExpr().getMethod().getName());
                         try {
+                            SootClass circleClass = stmt.getInvokeExpr().getMethod().getDeclaringClass();
+                            SootMethod metod = circleClass.getMethodByName(stmt.getInvokeExpr().getMethod().getName());
+
                             if (!qOfMethods.contains(metod)) {
                                 qOfMethods.add(metod);
                             }

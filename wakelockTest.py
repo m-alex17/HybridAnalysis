@@ -2,7 +2,7 @@ import subprocess
 import uiautomator2 as u2
 import os
 import time
-
+import sys
 
 def findResult(start, end, output):
     return (output[output.find(start) + len(start):output.rfind(end)])

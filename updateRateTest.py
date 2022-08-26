@@ -2,6 +2,8 @@ import subprocess
 import uiautomator2 as u2
 import os
 import time
+import sys
+
 root_dir = "F:\\javaP\\freqResult"
 
 dir_set = []

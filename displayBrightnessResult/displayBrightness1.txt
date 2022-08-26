@@ -1,0 +1,4 @@
+com.asus.gallery
+com.asus.gallery.app.EPhotoActivity
+-1
+both

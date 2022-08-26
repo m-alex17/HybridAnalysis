@@ -61,7 +61,7 @@ public class Main {
 //    static String apkPath = "F:\\Apps\\DroidLeaks\\CSipSimple-rev-88d62bc951.apk"; //nothing
 
 
-    static String apkPath = "F:\\Apps\\Sentinel\\org.thecongers.mtpms_2.apk"; // sensor
+//    static String apkPath = "F:\\Apps\\Sentinel\\org.thecongers.mtpms_2.apk"; // sensor
 //        static String apkPath = "F:\\Apps\\Sentinel\\com.drismo_17.apk"; // sensor
 //    static String apkPath = "F:\\Apps\\Sentinel\\eu.hydrologis.geopaparazzi_39.apk"; // Sensor
 //    static String apkPath = "F:\\Apps\\Sentinel\\de.tui.itlogger_2.apk"; // ?
@@ -75,6 +75,7 @@ public class Main {
 
 //    static String apkPath = "F:\\app-debug.apk";
 //    static String apkPath = "F:\\sensroLeak.apk";
+//    static String apkPath = "F:\\updateRate.apk";
 //    static String apkPath = "F:\\Stellarium_Mobile_PLUS_Star_Map_v1.7.6_Apktops.ir.apk";
 //    static String apkPath = "F:\\HERE WeGo Maps Navigation.apk";
 //    static String apkPath = "F:\\com.instagram.android.apk";
@@ -82,12 +83,23 @@ public class Main {
 //    static String apkPath = "F:\\Google-Maps-11.15.4(www.FarsRoid.com).apk";
 
 //    static String apkPath = "F:\\Apps\\IMGdroid\\CameraView_apkpure.com.apk";
+//    static String apkPath = "F:\\Apps\\IMGdroid\\com.amaze.filemanager_54.apk";
 //    static String apkPath = "F:\\Apps\\IMGdroid\\com.clover.apk";
 //    static String apkPath = "F:\\Apps\\IMGdroid\\com.GlideImageView_apkpure.com.apk";
+//    static String apkPath = "F:\\Apps\\IMGdroid\\com.keylesspalace.tusky_68.apk";
 //    static String apkPath = "F:\\Apps\\IMGdroid\\com.moez.QKSMS.apk";
-//    static String apkPath = "F:\\Apps\\IMGdroid\\droid-comic-viewer.apk";
+//    static String apkPath = "F:\\Apps\\IMGdroid\\com.money.manager.ex_997.apk";
+//    static String apkPath = "F:\\Apps\\IMGdroid\\com.thebluealliance.4030199.apk";
+//    static String apkPath = "F:\\Apps\\IMGdroid\\com.todobom.opennotescanner_32.apk";
+//    static String apkPath = "F:\\Apps\\IMGdroid\\de.tap.easy_xkcd_163.apk";
+//    static String apkPath = "F:\\Apps\\IMGdroid\\documentviewer.apk"; /* location */
 //    static String apkPath = "F:\\Apps\\IMGdroid\\document_iewer.apk";
+//    static String apkPath = "F:\\Apps\\IMGdroid\\droid-comic-viewer.apk";
+    static String apkPath = "F:\\Apps\\IMGdroid\\org.aphotomanager.apk"; /* location and sensor */
 //    static String apkPath = "F:\\Apps\\IMGdroid\\org.imagePicker_13.apk"; /* DisplayBrightness */
+//    static String apkPath = "F:\\Apps\\IMGdroid\\org.horaapps.leafpic_13.apk";
+//    static String apkPath = "F:\\Apps\\IMGdroid\\org.kontalk_440.apk";
+//    static String apkPath = "F:\\Apps\\IMGdroid\\Scarlet Notes FD .apk";
 
     public static SetupApplication app;
 
@@ -125,6 +137,7 @@ public class Main {
         Util.getInstance().deleteTestFiles("wifilockResult");
         Util.getInstance().deleteTestFiles("displayBrightnessResult");
         Util.getInstance().deleteTestFiles("displayTimeOutResult");
+        Util.getInstance().deleteTestFiles("freqResult");
 
 //        Thread thread = new Thread(() -> {
 //            try {
@@ -234,14 +247,14 @@ public class Main {
         System.out.println(lookingFor + "******-" + resourceTestType);
 
 
-        System.out.println("**********Beginning of Analysis of Sensor Update Rate**********");
-        Util.getInstance().clearBeforeNewRound();
-        resourceInfo.setResourceType("updateRate");
-        rsrcType = resourceInfo.getResourceType();
-        setrsrInfo(rsrcType);
-        lookingFor = resourceInfo.getAcquireMethod();
-        Util.getInstance().doFreqAnalysis(lookingFor, packageName, rsrcType, orderedActivities, resourceInfo, resourceTestType, apkPath, androidCallGraphFilter);
-        resourceInfo.clear();
+//        System.out.println("**********Beginning of Analysis of Sensor Update Rate**********");
+//        Util.getInstance().clearBeforeNewRound();
+//        resourceInfo.setResourceType("updateRate");
+//        rsrcType = resourceInfo.getResourceType();
+//        setrsrInfo(rsrcType);
+//        lookingFor = resourceInfo.getAcquireMethod();
+//        Util.getInstance().doFreqAnalysis(lookingFor, packageName, rsrcType, orderedActivities, resourceInfo, resourceTestType, apkPath, androidCallGraphFilter);
+//        resourceInfo.clear();
 //
         System.out.println("**********Beginning of Analysis of GPS**********");
         Util.getInstance().clearBeforeNewRound();
@@ -332,9 +345,10 @@ public class Main {
 
         Instant finishStatic = Instant.now();
         float timeElapsed = Duration.between(startStatic, finishStatic).toMillis();
-        System.out.println("Time Elapsed at Static phase is:" + timeElapsed);
+//        System.out.println("Time Elapsed at Static phase is:" + timeElapsed);
         System.out.print("Time Elapsed at Static phase is: ");
         System.out.printf("%.2f", (timeElapsed) / 1000);
+        System.out.println();
 
 
         //***************************Phase TestCase***********************
@@ -392,7 +406,7 @@ public class Main {
             System.out.println(e);
         }
 
-//
+
         pyPath = System.getProperty("user.dir") + "\\gpsTest.py";
         try {
             ProcessBuilder processBuilder = new ProcessBuilder("python", pyPath, apkPath);
@@ -524,14 +538,14 @@ public class Main {
         } catch (Exception e) {
             System.out.println(e);
         }
-
-//        Instant finishDynamic = Instant.now();
-//        timeElapsed = Duration.between(startDynamic, finishDynamic).toMillis();
-//        System.out.println("Time Elapsed at Dynamic phase is:" +timeElapsed);
-//        System.out.print("Time Elapsed at Dynamic phase is: ");
-//        System.out.printf("%.2f", (timeElapsed)/1000);
-
-
+//
+        Instant finishDynamic = Instant.now();
+        timeElapsed = Duration.between(startDynamic, finishDynamic).toMillis();
+        System.out.println("Time Elapsed at Dynamic phase is:" +timeElapsed);
+        System.out.print("Time Elapsed at Dynamic phase is: ");
+        System.out.printf("%.2f", (timeElapsed)/1000);
+//
+//
     }
 
 

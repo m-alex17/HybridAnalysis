@@ -1,0 +1,4 @@
+com.asus.gallery
+com.asus.gallery.app.MovieActivity
+-1
+both

@@ -1,0 +1,4 @@
+com.asus.gallery
+com.asus.gallery.app.PermissionSettingActivity
+-1
+both

@@ -2,7 +2,7 @@ import subprocess
 import uiautomator2 as u2
 import os
 import time
-
+import sys
 
 def findResult(start, end, output):
     return (output[output.find(start) + len(start):output.rfind(end)])
@@ -81,7 +81,7 @@ for f in lines:
     print(d.info)
     d.screen_on()
 
-     print(runCommand("adb install -r -g "+apkName))
+    print(runCommand("adb install -r -g "+apkName))
 
     if testType in "both":
         d.app_start(packageName)
