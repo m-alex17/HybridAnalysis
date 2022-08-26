@@ -8,7 +8,7 @@ Update rate of Sensors
 
 ## Prerequisites
 - Python 3
-- [Python UIAutomator](https://github.com/xiaocong/uiautomator)
+- [Python UIAutomator]([https://github.com/xiaocong/uiautomator](https://github.com/openatx/uiautomator2))
 - Java JDK 8+
 - [Apktool](https://ibotpeaches.github.io/Apktool/)
 - [Android SDK](https://developer.android.com/studio/#downloads)
