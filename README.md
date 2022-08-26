@@ -1,8 +1,8 @@
-# hybrid
+# HybridAnalysis
 This is an automated test oracle to find energy defects of android applications implemented on top of the soot framework.
 This tool combines static and dynamic analysis in order to find energy defects related to CPU, GPS, Sensors, Screen, WiFiLock and WakeLock.
 Three main patterns are investigated: 
-Resource Leak
+- [Resource Leak]
 Screen defects
 Update rate of Sensors
 
