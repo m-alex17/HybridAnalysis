@@ -5,6 +5,8 @@ Three main patterns are investigated:
 - Resource Leak
 - Screen defects
 - Update rate of Sensors
+
+Hybrid analysis is a state-of-the-art method for manifesting problems that can drain the battery of Android Os smartphones. 
 A quick litrature review what have been done regarding Energy defects of android application:
 ![EnergyDefectLR](https://user-images.githubusercontent.com/59416975/186904367-0db74f4b-3113-4af9-afba-f08eadba3bcd.png)
 
