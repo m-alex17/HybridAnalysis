@@ -43,4 +43,4 @@ results of the static analysis module.
 Index Terms—Static Analysis, Energy Testing, Android
 
 ## Questions
-If you have any question, please contact the authors.
+If you have any question, please contact the author.
