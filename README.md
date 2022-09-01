@@ -21,5 +21,26 @@ A quick litrature review regarding what have been done in the area of Energy def
 ## How to use?
 Clone the project, Run it.
 
+## Abstract
+Abstract—Energy consumption of mobile applications has a
+great impact on the satisfaction of users. Many developers do not
+consider energy-efficient programming practices when coding an
+applications. Therefore, many applications can be improved in
+terms of energy usage by detecting and removing their energy
+defects. Most works towards this goal focus on static analysis
+of Android applications. In this paper, we propose a hybrid
+framework consisting of static and dynamic modules for finding
+energy defects. Our static module can effectively analyse an
+Android application considering its life-cycle and look for the
+energy anti-patterns. The results of static analysis are then
+transformed to executable GUI-based test cases. In the dynamic
+module, the generated test cases are run, and their results are
+evaluated using an automated oracle, which does not need the
+energy measurement. Using our framework, we have analyzed 29
+applications, and found 9 applications with energy defects. Our
+dynamic module could effectively detect the false positives in the
+results of the static analysis module.
+Index Terms—Static Analysis, Energy Testing, Android
+
 ## Questions
-If you have any question, please contact the authors of the paper.
+If you have any question, please contact the authors.
