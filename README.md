@@ -27,7 +27,7 @@ great impact on the satisfaction of users. Many developers do not
 consider energy-efficient programming practices when coding an
 applications. Therefore, many applications can be improved in
 terms of energy usage by detecting and removing their energy
-defects. Most works towards this goal focus on static analysis
+defects. Most researchers towards this goal focus on static analysis
 of Android applications. In this paper, we propose a hybrid
 framework consisting of static and dynamic modules for finding
 energy defects. Our static module can effectively analyse an
